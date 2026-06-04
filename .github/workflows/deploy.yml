@@ -1,0 +1,15 @@
+name: Automatic Deploy via Docker
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mock Deploy Step
+        run: |
+          echo "HỆ THỐNG ĐANG TRIỂN KHAI DOCKER CHO TAG: ${{ github.ref_name }}"
+          echo "Deploy thực hiện bởi tài khoản: ${{ github.actor }}"
